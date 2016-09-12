@@ -28,5 +28,5 @@ mkdir /var/log/zun
 touch /var/log/zun/zun-api.log
 touch /var/log/zun/zun-compute.log
 zun-api --log-file=/var/log/zun/zun-api.log --config-file=/etc/zun/zun.conf &
-zun-compute --log-file=/var/log/zun/zun-compute.log --config-file=/etc/zun/zun.conf
-
+zun-compute --log-file=/var/log/zun/zun-compute.log --config-file=/etc/zun/zun.conf &
+wrapdocker

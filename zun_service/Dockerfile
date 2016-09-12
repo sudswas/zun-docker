@@ -33,5 +33,5 @@ WORKDIR /root
 RUN git clone https://github.com/openstack/python-zunclient
 WORKDIR /root/python-zunclient
 RUN pip install -e .
-CMD ["wrapdocker", "/zun_script.sh"]
+CMD ["/zun_script.sh"]
 
