@@ -8,7 +8,7 @@ At the moment though if you want to play around.
 1. Clone the code.
 2. Go to each folder and build the docker image via:
 
-  docker build -t <your-tag> .
+  docker build -t your-tag .
 
 3. At the end of this process, you should have 3 docker images:
   - For mysql
@@ -17,9 +17,9 @@ At the moment though if you want to play around.
 
 4. Run the services in sequence using:
   
-  - docker run -itd --name mysql --hostname mysql <mysql-image-name>
-  - docker run -itd --name keystone --link mysql:mysql --hostname controller <keystone-image-name>
-  - docker run -itd --privileged --name zun_service --hostname zun --link mysql:mysql --link keystone:controller <zun-image-name>
+  - docker run -itd --name mysql --hostname mysql mysql-image-name
+  - docker run -itd --name keystone --link mysql:mysql --hostname controller keystone-image-name
+  - docker run -itd --privileged --name zun_service --hostname zun --link mysql:mysql --link keystone:controller zun-image-name
 
 This should create 3 containers that are inter-networked and you will have the zun service ready to go for development.
 
