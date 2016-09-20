@@ -53,6 +53,8 @@ openstack endpoint create \
   --region RegionOne \
   identity
 
+openstack service create --name=zun --description="Zun Container Service" container
+openstack endpoint create --publicurl http://127.0.0.1:9512/v1 --adminurl http://127.0.0.1:9512/v1 --internalurl http://127.0.0.1:9512/v1 --region=RegionOne container
 echo "Created the Identity service"
 
 openstack project create --description "Admin Project" admin
